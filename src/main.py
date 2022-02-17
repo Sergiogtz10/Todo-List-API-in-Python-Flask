@@ -53,7 +53,7 @@ def Create_todos():
     return jsonify(new_todo.serialize()), 200
 
 @app.route('/Todo/<id>', methods=['DELETE'])
-def remove_todo(id):
+def DeleteTodos(id):
     todo = Todo.query.get(id)
     db.session.delete(todo)
     db.session.commit()
